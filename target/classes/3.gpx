@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+    <gpx version="1.1" creator="Geopedia" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"        xmlns="http://www.topografix.com/GPX/1/1"     xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+    <metadata>
+    <name>Ojstersek - Slomnik (razpotje)</name>
+    <desc></desc>
+    <author>
+    <name></name>
+    <link href="http://www.geopedia.si/?params=L12126_F2251">
+    <text></text>
+    </link>
+    </author>
+     </metadata><trk>
+<name></name>
+<trkseg>
+<trkpt lat="46.219183392497" lon="15.218564407739">
+<ele>478.45</ele>
+</trkpt>
+<trkpt lat="46.219183392497" lon="15.218564407739">
+<ele>478.45</ele>
+</trkpt>
+<trkpt lat="46.219271447562" lon="15.218556334825">
+<ele>478.77</ele>
+</trkpt>
+<trkpt lat="46.219085382848" lon="15.218462263644">
+<ele>479.36</ele>
+</trkpt>
+<trkpt lat="46.218834125091" lon="15.218581804712">
+<ele>475.19</ele>
+</trkpt>
+<trkpt lat="46.218696293516" lon="15.218670690315">
+<ele>470.87</ele>
+</trkpt>
+<trkpt lat="46.218477380864" lon="15.218813690552">
+<ele>462.28</ele>
+</trkpt>
+<trkpt lat="46.218288286872" lon="15.21889070388">
+<ele>458.76</ele>
+</trkpt>
+<trkpt lat="46.217985526724" lon="15.218842957682">
+<ele>454.32</ele>
+</trkpt>
+<trkpt lat="46.2176686959" lon="15.218673315821">
+<ele>452.08</ele>
+</trkpt>
+<trkpt lat="46.217412447073" lon="15.218581558426">
+<ele>447.89</ele>
+</trkpt>
+<trkpt lat="46.216913282795" lon="15.218482349317">
+<ele>440.25</ele>
+</trkpt>
+<trkpt lat="46.216260891522" lon="15.218570468932">
+<ele>429.12</ele>
+</trkpt>
+<trkpt lat="46.215932488997" lon="15.218569154673">
+<ele>426.27</ele>
+</trkpt>
+<trkpt lat="46.214690023913" lon="15.217828646806">
+<ele>408.98</ele>
+</trkpt>
+<trkpt lat="46.214254113575" lon="15.217587261604">
+<ele>401.59</ele>
+</trkpt>
+<trkpt lat="46.214125976213" lon="15.217547868572">
+<ele>398.94</ele>
+</trkpt>
+<trkpt lat="46.213909654464" lon="15.217747899318">
+<ele>397.18</ele>
+</trkpt>
+<trkpt lat="46.213612331434" lon="15.217960566002">
+<ele>390.98</ele>
+</trkpt>
+<trkpt lat="46.213454129764" lon="15.218348755443">
+<ele>388.74</ele>
+</trkpt>
+<trkpt lat="46.213151931916" lon="15.218755806941">
+<ele>381.98</ele>
+</trkpt>
+<trkpt lat="46.21283248903" lon="15.218773968422">
+<ele>375.05</ele>
+</trkpt>
+<trkpt lat="46.212286525817" lon="15.218447771322">
+<ele>366.47</ele>
+</trkpt>
+<trkpt lat="46.211953749257" lon="15.218381638791">
+<ele>362.86</ele>
+</trkpt>
+<trkpt lat="46.211557916388" lon="15.218354135786">
+<ele>360.78</ele>
+</trkpt>
+<trkpt lat="46.211087020796" lon="15.218805858165">
+<ele>357.02</ele>
+</trkpt>
+<trkpt lat="46.211024352034" lon="15.218643605639">
+<ele>356.56</ele>
+</trkpt>
+<trkpt lat="46.21075933036" lon="15.218435183945">
+<ele>352.59</ele>
+</trkpt>
+<trkpt lat="46.210314398942" lon="15.218206605601">
+<ele>350.05</ele>
+</trkpt>
+<trkpt lat="46.209968163272" lon="15.218121112984">
+<ele>347.77</ele>
+</trkpt>
+<trkpt lat="46.209484352206" lon="15.217944613226">
+<ele>346.64</ele>
+</trkpt>
+<trkpt lat="46.2092578783" lon="15.21780892874">
+<ele>347.07</ele>
+</trkpt>
+<trkpt lat="46.208919946682" lon="15.217615778896">
+<ele>347.19</ele>
+</trkpt>
+<trkpt lat="46.208164169955" lon="15.217612768207">
+<ele>346.76</ele>
+</trkpt>
+<trkpt lat="46.207778924414" lon="15.217694173485">
+<ele>347.8</ele>
+</trkpt>
+<trkpt lat="46.207486503539" lon="15.218164726312">
+<ele>352.74</ele>
+</trkpt>
+<trkpt lat="46.207349004968" lon="15.218547771198">
+<ele>360.54</ele>
+</trkpt>
+<trkpt lat="46.207297569127" lon="15.219091853675">
+<ele>360.57</ele>
+</trkpt>
+<trkpt lat="46.207088199094" lon="15.219417585765">
+<ele>373.14</ele>
+</trkpt>
+<trkpt lat="46.207007877084" lon="15.220008201595">
+<ele>373.33</ele>
+</trkpt>
+<trkpt lat="46.207039320776" lon="15.220495593496">
+<ele>370.13</ele>
+</trkpt>
+<trkpt lat="46.206607891316" lon="15.22151269542">
+<ele>369.2</ele>
+</trkpt>
+<trkpt lat="46.206411793772" lon="15.221719245006">
+<ele>370.25</ele>
+</trkpt>
+<trkpt lat="46.206262843101" lon="15.221971341113">
+<ele>369.32</ele>
+</trkpt>
+<trkpt lat="46.205086629707" lon="15.22301621976">
+<ele>426.63</ele>
+</trkpt>
+<trkpt lat="46.204547261211" lon="15.222819639616">
+<ele>442.74</ele>
+</trkpt>
+<trkpt lat="46.204008679131" lon="15.222176128897">
+<ele>476.59</ele>
+</trkpt>
+<trkpt lat="46.203577034991" lon="15.222057748659">
+<ele>495.61</ele>
+</trkpt>
+<trkpt lat="46.203594666999" lon="15.222059245727">
+<ele>495.12</ele>
+</trkpt>
+</trkseg>
+</trk>
+</gpx>
