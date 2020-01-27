@@ -14,7 +14,7 @@ public class Main {
   private static final String CONTENT_PATH = "src/main/resources";
 
   public static void main(String[] args) throws Exception {
-    String filename = "3.gpx";
+    String filename = "original.gpx";
 
     Document doc =
         DocumentHelper.parseText(
