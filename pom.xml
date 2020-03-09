@@ -3,14 +3,35 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>si.horvie</groupId>
-	<artifactId>gpxinverter</artifactId>
+	<artifactId>gpx-util</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		
+		<version.maven-compiler-plugin>3.8.1</version.maven-compiler-plugin>
+		<version.jdk>11</version.jdk>
+		<version.dom4j>2.1.1</version.dom4j>
+	</properties>
 
 	<dependencies>
 		<dependency>
 			<groupId>org.dom4j</groupId>
 			<artifactId>dom4j</artifactId>
-			<version>2.1.1</version>
+			<version>${version.dom4j}</version>
 		</dependency>
 	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${version.maven-compiler-plugin}</version>
+				<configuration>
+					<target>${version.jdk}</target>
+					<source>${version.jdk}</source>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 </project>
