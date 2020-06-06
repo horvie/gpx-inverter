@@ -11,7 +11,7 @@
 		
 		<version.maven-compiler-plugin>3.8.1</version.maven-compiler-plugin>
 		<version.jdk>11</version.jdk>
-		<version.dom4j>2.1.1</version.dom4j>
+		<version.dom4j>2.1.3</version.dom4j>
 	</properties>
 
 	<dependencies>
