@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+    <gpx version="1.1" creator="Geopedia" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"        xmlns="http://www.topografix.com/GPX/1/1"     xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+<trk>
+<name></name>
+<trkseg>
+<trkpt lat="46.34444545247" lon="14.832729139947">
+<ele>433.63</ele>
+</trkpt>
+<trkpt lat="46.344617675661" lon="14.832554272684">
+<ele>434.18</ele>
+</trkpt>
+<trkpt lat="46.344927734298" lon="14.832254397186">
+<ele>435.68</ele>
+</trkpt>
+</trkseg>
+</trk>
+</gpx>

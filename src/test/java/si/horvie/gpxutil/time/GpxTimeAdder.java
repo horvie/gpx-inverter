@@ -1,4 +1,4 @@
-package si.horvie.gpxinverter;
+package si.horvie.gpxutil.time;
 
 import java.nio.file.Files;
 import java.nio.file.Paths;
