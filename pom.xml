@@ -4,21 +4,51 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>si.horvie</groupId>
 	<artifactId>gpx-util</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0-SNAPSHOT</version>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		
-		<version.maven-compiler-plugin>3.8.1</version.maven-compiler-plugin>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
 		<version.jdk>11</version.jdk>
-		<version.dom4j>2.1.1</version.dom4j>
+		<version.quarkus>1.10.2.Final</version.quarkus>
+		<version.dom4j>2.1.3</version.dom4j>
+
+		<version.compiler-plugin>3.8.1</version.compiler-plugin>
+		<version.release-plugin>2.5.3</version.release-plugin>
+		<version.scm-plugin>1.11.2</version.scm-plugin>
+		<version.surefire-plugin>2.22.1</version.surefire-plugin>
 	</properties>
 
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>io.quarkus</groupId>
+				<artifactId>quarkus-universe-bom</artifactId>
+				<version>${version.quarkus}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+
 	<dependencies>
+		<dependency>
+			<groupId>io.quarkus</groupId>
+			<artifactId>quarkus-picocli</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>org.dom4j</groupId>
 			<artifactId>dom4j</artifactId>
 			<version>${version.dom4j}</version>
+		</dependency>
+
+		<!-- Test -->
+		<dependency>
+			<groupId>io.quarkus</groupId>
+			<artifactId>quarkus-junit5</artifactId>
+			<scope>test</scope>
 		</dependency>
 	</dependencies>
 
@@ -32,6 +62,67 @@
 					<source>${version.jdk}</source>
 				</configuration>
 			</plugin>
+
+			<plugin>
+				<groupId>io.quarkus</groupId>
+				<artifactId>quarkus-maven-plugin</artifactId>
+				<version>${version.quarkus}</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>build</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>${version.surefire-plugin}</version>
+				<configuration>
+					<systemPropertyVariables>
+						<java.util.logging.manager>org.jboss.logmanager.LogManager</java.util.logging.manager>
+						<maven.home>${maven.home}</maven.home>
+					</systemPropertyVariables>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
+
+	<profiles>
+		<profile>
+			<id>native</id>
+			<activation>
+				<property>
+					<name>native</name>
+				</property>
+			</activation>
+			<properties>
+				<quarkus.package.type>native</quarkus.package.type>
+			</properties>
+			<build>
+				<plugins>
+					<plugin>
+						<artifactId>maven-failsafe-plugin</artifactId>
+						<version>${version.surefire-plugin}</version>
+						<executions>
+							<execution>
+								<goals>
+									<goal>integration-test</goal>
+									<goal>verify</goal>
+								</goals>
+								<configuration>
+									<systemPropertyVariables>
+										<native.image.path>${project.build.directory}/${project.build.finalName}-runner</native.image.path>
+										<java.util.logging.manager>org.jboss.logmanager.LogManager</java.util.logging.manager>
+										<maven.home>${maven.home}</maven.home>
+									</systemPropertyVariables>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
 </project>
