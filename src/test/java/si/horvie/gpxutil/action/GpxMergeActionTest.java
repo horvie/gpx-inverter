@@ -8,9 +8,11 @@ import org.junit.jupiter.api.Test;
 class GpxMergeActionTest {
 
 	@Test
-	void testMerge() {
-		List<String> responses = new GpxMergeAction("src/test/resources/input", "target/output.gpx").merge();
-		System.out.println(responses);
+	void testMerge() throws Exception {
+		String outputFile = "target/output.gpx";
+
+		List<String> responses = new GpxMergeAction("src/test/resources/input", outputFile).merge();
 		Assertions.assertTrue(responses.isEmpty());
+
 	}
 }

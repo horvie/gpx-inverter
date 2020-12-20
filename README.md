@@ -1,6 +1,7 @@
 # gpx-util
 
-Currently only simple Java app. It may become simple JS app with GUI.
+Utilitfy for handling gpx files.
 
-* Invert gpx route.
-* Add time to gpx route.
+Currently only merging of gpx files (with possible reversion) is supported.
+Filenames are merged by filename order (ie. 01.gpx, 02.gpx, 03.gpx ...)
+If gpx content has to be reversed, it's filename must end with 'r' (ie. 03r.gpx).

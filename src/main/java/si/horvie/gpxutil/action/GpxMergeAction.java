@@ -20,7 +20,7 @@ import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
 
 public class GpxMergeAction {
-	private static final String STUB = "<gpx><trk><trkseg></trkseg></trk></gpx>";
+	private static final String STUB = "<gpx version=\"1.1\" creator=\"Geopedia\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns=\"http://www.topografix.com/GPX/1/1\" xsi:schemaLocation=\"http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd\"><trk><trkseg></trkseg></trk></gpx>";
 	private static final String REVERSE_MARK = "r.";
 
 	private final String inputFolder;
@@ -52,11 +52,12 @@ public class GpxMergeAction {
 			// this should not happen (stub is correct)
 			throw new IllegalArgumentException(e.getMessage(), e);
 		}
+		Element trkseg = pointToSegment(doc);
 
 		fileList.sort(String.CASE_INSENSITIVE_ORDER);
 		fileList.forEach(f -> {
 			try {
-				this.add(f, doc);
+				this.add(f, trkseg);
 			} catch (Exception e) {
 				responses.add("Problem adding '" + f + "': " + e.getMessage());
 			}
@@ -69,6 +70,10 @@ public class GpxMergeAction {
 		}
 
 		return responses;
+	}
+
+	private Element pointToSegment(Document doc) {
+		return doc.getRootElement().element("trk").element("trkseg");
 	}
 
 	private List<String> extractFiles(File inputFile) {
@@ -85,17 +90,18 @@ public class GpxMergeAction {
 		return fileList;
 	}
 
-	private void add(String gpxFile, Document doc) throws Exception {
+	private void add(String gpxFile, Element trkseg) throws Exception {
 		try (FileInputStream content = new FileInputStream(gpxFile)) {
 			Document gpx = new SAXReader().read(content);
 
 			List<Element> trkpts = gpx.getRootElement().element("trk").element("trkseg").elements();
 
 			if (gpxFile.contains(REVERSE_MARK)) {
+				trkpts.forEach(Element::detach);
 				Collections.reverse(trkpts);
 			}
 
-			trkpts.forEach(el -> doc.add((Element) el.detach()));
+			trkpts.forEach(el -> trkseg.add((Element) el.detach()));
 		}
 	}
 
